@@ -1,0 +1,553 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Central Web - Atendimento</title>
+  <meta name="description" content="Central Web - Atendimento Online. Tire dúvidas e receba suporte rapidamente.">
+  <meta name="keywords" content="central web, atendimento, suporte, chat, ajuda">
+  <meta name="author" content="Central Web">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <meta name="csrf-token" content="ryLiqvc8Mz223IeoxRGmRR1kP4ILtlPqNNjuQCMz">
+  <link rel="preload" href="https://scripts.converteai.net/34d5b5d5-1b7d-4685-9eca-292789c660b8/players/6a51c29ac4f64cc446fb7626/v4/embed.html">
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/34d5b5d5-1b7d-4685-9eca-292789c660b8/players/6a51c29ac4f64cc446fb7626/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/34d5b5d5-1b7d-4685-9eca-292789c660b8/6a51c297f2ee54880d037073/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
+  <!-- Ícones -->
+  <!-- Se você tiver um favicon local, troque para: <link rel="icon" href="home/favicon.ico" sizes="32x32"> -->
+
+  <!-- Estilos (organizados em /home/css) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/all.min.css" rel="stylesheet">
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
+
+  <!-- Google Fonts (se quiser 100% offline, baixe a fonte e coloque em fonts.css) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Estilo (mantido do arquivo original) -->
+  <style>
+    :root {
+      --cor-azul: #ffffff;
+      --cor-amarelo: #ffcc00;
+      --cor-bg: #f5f7fa;
+      --cor-texto: #333;
+      --cor-secundario: #fff;
+      --cor-hover: #002a80;
+    }
+
+    body {
+      background: var(--cor-bg);
+      color: var(--cor-texto);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== BARRA SUPERIOR ===== */
+    .top-banner {
+      background: var(--cor-amarelo);
+      color: var(--cor-azul);
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .top-banner button {
+      background: var(--cor-azul);
+      color: var(--cor-secundario);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-banner button:hover {
+      background: var(--cor-hover);
+    }
+
+    /* ===== HEADER ESTILO ===== */
+    .header-main {
+      background: var(--cor-azul);
+      border-bottom: 5px solid var(--cor-amarelo);
+      color: var(--cor-secundario);
+      padding: 15px 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-main .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .header-main .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-main .logo img { height: 45px; display: block; margin: 0 auto; }
+
+    .header-main .menu {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .header-main .menu a {
+      color: var(--cor-secundario);
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .header-main .menu a:hover { color: var(--cor-amarelo); }
+
+    /* Botão no header */
+    .btn-regularizar {
+      background: var(--cor-amarelo);
+      color: var(--cor-azul);
+      font-weight: 700;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-regularizar:hover {
+      background: #ffd633;
+      color: var(--cor-azul);
+    }
+
+    /* ===== FOOTER ESTILO ===== */
+    footer.footer-main {
+      background: var(--cor-azul);
+      color: var(--cor-secundario);
+      border-top: 5px solid var(--cor-amarelo);
+      padding: 40px 0 25px;
+      text-align: center;
+    }
+
+    footer.footer-main .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    footer.footer-main h5 {
+      color: var(--cor-amarelo);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    footer.footer-main ul { list-style: none; padding: 0; margin: 0 auto 15px; }
+
+    footer.footer-main li {
+      margin: 4px 0;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+    }
+
+    footer.footer-main a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer.footer-main a:hover { color: var(--cor-amarelo); }
+
+    footer.footer-main .footer-bottom {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    /* ===== CENTRALIZAÇÃO GERAL ===== */
+    .bodyPage {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: calc(100vh - 120px);
+      padding: 24px 12px;
+    }
+
+    .bodyPage > .container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .card-atendimento {
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .card-atendimento .card-header {
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header-main { padding: 10px 0; }
+      .header-main .logo img { height: 38px; }
+
+      .footer-main .container { flex-direction: column; }
+      .footer-main .row { margin-top: 20px; }
+
+      .bodyPage { padding: 12px 8px; }
+      .bodyPage > .container { max-width: 100%; }
+
+      /* CHAT MOBILE */
+      .card-atendimento {
+        border-radius: 10px;
+      }
+      .card-atendimento .card-body {
+        height: calc(100dvh - 180px) !important;
+        min-height: 400px !important;
+        padding: 14px 14px calc(14px + env(safe-area-inset-bottom)) !important;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .mensagem-chat .mensagens {
+        max-width: 88% !important;
+      }
+
+      .mensagem-chat .avatar {
+        width: 40px !important;
+        height: 40px !important;
+      }
+
+      .mensagem-chat.bot .mensagens .text .msg,
+      .mensagem-chat.user .mensagens .text .msg {
+        font-size: 15px !important;
+        padding: 10px 13px !important;
+        line-height: 1.45 !important;
+      }
+
+      .cpf-container {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+
+      .cpf-container input#cpfInput {
+        width: 100% !important;
+        min-width: 100% !important;
+        min-height: 48px !important;
+        font-size: 16px !important; /* Evita zoom no iOS */
+        -webkit-appearance: none;
+        border-radius: 10px;
+      }
+
+      .cpf-container button.button-chat,
+      button.button-chat {
+        width: 100% !important;
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .user-input-container,
+      .user-input-container .input-container { width: 100% !important; }
+
+      input, textarea, select { font-size: 16px !important; }
+    }
+
+    @media (max-width: 420px) {
+      .header-main .logo img { height: 34px; }
+      .status-title { font-size: 15px !important; }
+      .card-atendimento .card-body { padding: 12px 10px calc(12px + env(safe-area-inset-bottom)) !important; }
+    }
+    
+    /* Melhorias gerais para touch */
+    button, .button-chat, input, select {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+      touch-action: manipulation;
+    }
+
+    /* ===== CAMPOS DE ENTRADA MAIS VISÍVEIS ===== */
+    .user-input-container .input-container {
+      background: #ffffff !important;
+      border: 2px solid #ffffff !important;
+      border-radius: 12px !important;
+      padding: 14px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+
+
+    .cpf-container input,
+    .user-input-container input[type="text"],
+    .user-input-container input:not([type]) {
+      background: #ffffff !important;
+      border: 2px solid #007bff !important;
+      border-radius: 10px !important;
+      padding: 14px 16px !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      color: #222 !important;
+      min-height: 50px !important;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+      transition: border-color .2s, box-shadow .2s, transform .1s;
+    }
+
+    .cpf-container input::placeholder,
+    .user-input-container input::placeholder {
+      color: #6c757d !important;
+      opacity: 1 !important;
+      font-weight: 400 !important;
+    }
+
+    .cpf-container input:focus,
+    .user-input-container input:focus {
+      border-color: #0056b3 !important;
+      box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.20) !important;
+      outline: none !important;
+    }
+
+    .user-input-container .button-chat {
+      background: #007bff !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      min-height: 50px !important;
+      padding: 12px 20px !important;
+      border-radius: 10px !important;
+      box-shadow: 0 3px 10px rgba(0, 123, 255, 0.35);
+    }
+    .user-input-container .button-chat:hover { background: #0056b3 !important; }
+
+    /* ===== BOTÕES: evitar texto vazando ===== */
+    .button-chat, button.button-chat {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      line-height: 1.2 !important;
+      height: auto !important;
+    }
+
+
+    /* ===== IFRAMES DE ÁUDIO — remover espaço branco embaixo ===== */
+    iframe[src*="audio"] {
+      height: 90px !important;
+      max-width: 340px !important;
+      display: block;
+      background: transparent !important;
+      border-radius: 12px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    /* Bolha da mensagem que contém apenas o iframe de áudio: sem fundo branco extra */
+    .mensagem-chat.bot .mensagens .text:has(> .msg > iframe[src*="audio"]),
+    .mensagem-chat.bot .mensagens .text:has(> .msg:only-child > iframe[src*="audio"]) {
+      background: transparent !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+    .msg:has(> iframe[src*="audio"]) {
+      background: transparent !important;
+      padding: 0 !important;
+      margin-bottom: 6px !important;
+      line-height: 0;
+    }
+
+    /* ===== POPUP LGPD ===== */
+    .popup-lgpd {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--cor-secundario);
+      border-top: 4px solid var(--cor-amarelo);
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 15px 20px;
+      font-size: 14px;
+      z-index: 9999;
+    }
+
+    .popup-lgpd p {
+      margin: 0;
+      color: #333;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.4;
+    }
+
+    .popup-lgpd a {
+      color: var(--cor-azul);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .popup-lgpd button {
+      background: var(--cor-azul);
+      color: var(--cor-secundario);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .popup-lgpd button:hover { background: var(--cor-hover); }
+  </style>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .msg { animation: fadeIn 0.5s ease forwards; margin-bottom: 12px; }
+    .icon { display: inline-block; margin-right: 5px; }
+    .button-chat {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .button-chat:hover { background: #0056b3; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4); }
+      50%      { transform: scale(1.02); box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6); }
+    }
+    #pagarTaxaButton:hover { background: #0056b3; }
+  </style>
+
+  <style>
+    .cpf-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .cpf-container input#cpfInput {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ced4da;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .cpf-container input#cpfInput:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.4);
+    }
+    .cpf-container button.button-chat { padding: 10px 16px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header-main">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo2.png" alt="Central Web">
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="bodyPage py-4">
+    <div class="container">
+      <div class="card-atendimento shadow-sm">
+        <div class="card-header d-flex align-items-center">
+          <div class="status-dot"></div>
+          <h5 class="status-title mb-0">Atendimento Virtual</h5>
+        </div>
+
+        <div class="card-body">
+          <div id="chat">
+            
+
+          </div><!-- /#chat -->
+        </div><!-- /.card-body -->
+      </div><!-- /.card-atendimento -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+
+
+  <script>
+    // Exibir popup apenas se ainda não aceitou
+    document.addEventListener("DOMContentLoaded", () => {
+      const popup = document.getElementById("popupLGPD");
+      const btn = document.getElementById("aceitarLGPD");
+      if (!document.cookie.includes("lgpd_consent=true")) popup.style.display = "flex";
+      btn.addEventListener("click", () => {
+        document.cookie = "lgpd_consent=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+        popup.style.display = "none";
+      });
+    });
+  </script>
+
+  <script>
+    window.rotas = {
+      urlSite: "./",
+      url: "./",
+      token: "ryLiqvc8Mz223IeoxRGmRR1kP4ILtlPqNNjuQCMz"
+    };
+  </script>
+
+  <!-- JS (organizados em /home/js) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/functions.js"></script>
+  <!-- funil-tracker.js DESABILITADO - usando apenas dashboard-tracker.js -->
+  <!-- <script src="home/js/funil-tracker.js"></script> -->
+
+
+  <!-- Removido o script Cloudflare "vcd15..." do HTML salvo; ele não é necessário localmente -->
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508720'},{'dcenter':'p3'},{'cp_id':'10893744'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script>
+</body></html>

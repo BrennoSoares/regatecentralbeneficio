@@ -1,0 +1,579 @@
+:root {
+    --cor-primaria: #0033A0; /* Azul Correios */
+    --cor-secundaria: #FFCC00; /* Amarelo Correios */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: rgb(200,205,215) rgb(245,245,245);
+    scrollbar-width: thin;
+}
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    background: rgb(245,247,249);
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+ul { list-style: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+button, input, select, a { outline: 0 !important; border: 0; text-decoration: none; }
+button { cursor: pointer; transition: 0.3s; }
+
+.container { width: 100%; max-width: 1000px; margin: 0 auto; }
+
+/* HEADER */
+header.central {
+    position: relative;
+    z-index: 90;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+header.central .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.central .content-header ul.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header.central .content-header ul.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #00082499;
+    cursor: pointer;
+    line-height: 1.17;
+    transition: all .3s linear;
+    font-size: 16px;
+    padding: 20px 16px 22px 0;
+    border-bottom: 4px solid transparent;
+}
+
+header.central .content-header ul.menu li a:hover,
+header.central .content-header ul.menu li a.active {
+    color: #0033A0;
+}
+
+header.central .content-header ul.menu li a.active {
+    border-color: var(--cor-primaria);
+}
+
+header.central .content-header .userarea {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #00082499;
+    font-size: 20px;
+}
+
+header.central .content-header .userarea span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-secundaria);
+    color: #0033A0;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 7px;
+    border-radius: 50%;
+}
+
+header.central .content-header .userarea,
+header.central .content-header a.logo {
+    width: 64px;
+}
+
+/* FOOTER */
+footer, .prefooter {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.prefooter {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.prefooter .top-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.prefooter .top-footer .apps {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    flex-wrap: wrap;
+}
+
+.prefooter .top-footer .apps a {
+    padding: 8px 16px;
+    width: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background-color: rgba(255,255,255,0.16);
+    transition: all .3s linear;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.prefooter .top-footer .apps a:hover {
+    border-color: #FFCC00;
+}
+
+.prefooter .top-footer h3 {
+    color: #FFCC00;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+footer .content-footer {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+}
+
+footer .content-footer .logo-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98px;
+    height: 98px;
+    margin-right: 15px;
+}
+
+footer .content-footer .logo-rodape img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    opacity: .6;
+}
+
+footer .content-footer .textRodape {
+    width: 100%;
+    flex: 0 0 1;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+footer .content-footer .textRodape p {
+    margin: 0;
+}
+
+/* BODY PAGE */
+section.bodyPage {
+    min-height: calc(100vh - 298px);
+    padding: 25px 0;
+}
+
+/* CARD ATENDIMENTO */
+.card-atendimento {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,51,160,.08);
+    overflow: hidden;
+}
+
+.card-atendimento .card-header {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    background: linear-gradient(180deg, #fff, #f0f4ff);
+}
+
+.card-atendimento .card-header .status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: var(--cor-primaria);
+}
+
+.card-atendimento .card-header .status-title {
+    color: rgba(0,8,38,0.8);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.card-atendimento .card-body {
+    height: calc(100vh - 403px);
+    min-height: 500px;
+    background: #fff;
+    overflow: auto;
+    width: 100%;
+    padding: 25px 40px;
+}
+
+/* CHAT MENSAGENS */
+.mensagem-chat {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.mensagem-chat.bot { justify-content: flex-start; }
+.mensagem-chat.user { justify-content: flex-end; }
+
+.mensagem-chat .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensagem-chat.user .avatar {
+    background-color: var(--cor-secundaria);
+}
+
+.mensagem-chat .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mensagem-chat .mensagens {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mensagem-chat.bot .mensagens .text .msg {
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: rgb(240,243,255);
+    color: rgba(0,8,38,0.8);
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.mensagem-chat.user .mensagens .text .msg {
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: var(--cor-secundaria);
+    color: #0033A0;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+/* TYPING INDICATOR */
+.text.bubble .typing-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(247,248,255);
+    padding: 8px 12px;
+    border-radius: 12px;
+    width: 50px;
+}
+
+.text.bubble .typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,8,38,0.4);
+    display: inline-block;
+    animation: spinner-bolinha 1100ms ease-in-out infinite;
+}
+
+@keyframes spinner-bolinha {
+    0%, 100% { transform: translateY(40%); }
+    50% { transform: translateY(-40%); }
+}
+
+/* INPUT E BOTÃO DO CHAT */
+input.input-chat {
+    min-width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #00082499;
+    height: 46px;
+    font-size: 16px;
+}
+
+button.button-chat {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 46px;
+    padding: 5px 20px;
+    font-size: 16px;
+    transition: all .3s linear;
+}
+
+button.button-chat:hover {
+    background-color: var(--cor-secundaria);
+    color: #0033A0;
+}
+
+/* LOADING SPINNER */
+.loading__circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.correios-header {
+    background-color: #fff;
+    border-bottom: 2px solid #FFD700; /* linha amarela */
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.correios-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.correios-header .logo img {
+    height: 40px; /* ajustar tamanho do logo */
+}
+
+.correios-header .breadcrumb {
+    font-size: 14px;
+    color: #0033A0; /* azul Correios */
+}
+
+.correios-header .breadcrumb a {
+    color: #0033A0;
+    text-decoration: none;
+}
+
+.correios-header .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.loading__circle-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--cor-primaria);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: loading__circle-spin 0.6s linear infinite;
+}
+
+@keyframes loading__circle-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* VIDEO EMBED */
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 345px;
+    max-width: 380px;
+}
+.correios-header {
+    background-color: #fff;
+    border-bottom: 3px solid #FFD700;
+    padding: 12px 15px;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center; /* centraliza conteúdo */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.correios-header .container {
+    display: flex;
+    flex-direction: column; /* logo acima, breadcrumb abaixo */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+}
+
+.correios-header .logo img {
+    height: 32px; /* logo menor */
+}
+
+.correios-header .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: #0033A0;
+    font-weight: 500;
+}
+
+.correios-header .breadcrumb a {
+    color: #0033A0;
+    text-decoration: none;
+}
+
+.correios-header .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.correios-header .breadcrumb span {
+    color: #555;
+}
+
+/* MOBILE-FIRST */
+@media (max-width: 768px) {
+    .correios-header .logo img {
+        height: 28px;
+    }
+
+    .correios-header .breadcrumb {
+        font-size: 12px;
+    }
+    
+    /* CHAT MOBILE - Melhorias */
+    .card-atendimento .card-body {
+        height: calc(100vh - 250px) !important;
+        min-height: 400px !important;
+        padding: 15px 20px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mensagem-chat .mensagens {
+        max-width: 85% !important;
+    }
+    
+    .mensagem-chat .avatar {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .mensagem-chat.bot .mensagens .text .msg,
+    .mensagem-chat.user .mensagens .text .msg {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        line-height: 1.4 !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .cpf-container {
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+    
+    .cpf-container input#cpfInput {
+        width: 100% !important;
+        min-width: 100% !important;
+        min-height: 44px !important;
+        font-size: 16px !important; /* Evita zoom no iOS */
+        -webkit-appearance: none;
+        border-radius: 8px;
+    }
+    
+    .cpf-container button.button-chat,
+    button.button-chat {
+        width: 100% !important;
+        min-height: 44px !important; /* Tamanho mínimo para touch */
+        padding: 12px 20px !important;
+        font-size: 16px !important; /* Evita zoom no iOS */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation; /* Remove delay de 300ms */
+    }
+    
+    .user-input-container {
+        width: 100% !important;
+    }
+    
+    .user-input-container .input-container {
+        width: 100% !important;
+    }
+    
+    /* Previne zoom duplo toque no iOS */
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+    
+    /* Melhorias de scroll */
+    .card-body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.correios-header {
+    background-color: #fff;
+    border-bottom: 2px solid #FFD700; /* linha amarela */
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.correios-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.correios-header .logo img {
+    height: 40px; /* ajustar tamanho do logo */
+}
+
+.correios-header .breadcrumb {
+    font-size: 14px;
+    color: #0033A0; /* azul Correios */
+}
+
+.correios-header .breadcrumb a {
+    color: #0033A0;
+    text-decoration: none;
+}
+
+.correios-header .breadcrumb a:hover {
+    text-decoration: underline;
+}

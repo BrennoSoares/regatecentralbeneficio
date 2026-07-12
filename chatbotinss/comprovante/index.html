@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.4">
+<title>Indenização</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f3f5f7;margin:0;padding:10px}
+.css1_container{max-width:900px;margin:auto;background:#fff;border-radius:12px;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.css1_top{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;gap:10px}
+.css1_logo img{height:50px}
+.css1_title{color:#1d5fa7;font-size:20px;font-weight:700;text-align:right}
+.css1_field{border:2px solid #cfd6dd;border-radius:10px;padding:8px;margin-bottom:8px}
+.css1_label{font-size:12px;color:#555}
+.css1_input{width:100%;border:none;font-size:16px;font-weight:700;outline:none;background:transparent}
+.css1_row{display:flex;gap:8px;flex-wrap:wrap}
+.css1_col{flex:1;min-width:120px}
+.css1_highlight{display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:10px;color:#fff;font-weight:700;padding:8px;text-align:center}
+.css1_green{background:#4caf50}
+.css1_red{background:#c62828}
+.css1_highlight span{font-size:12px}
+.css1_highlight strong{font-size:18px}
+.css1_table{margin-top:15px;border:2px solid #cfd6dd;border-radius:10px;overflow:hidden}
+.css1_table_header{background:#1d3f6e;color:#fff;padding:8px;font-weight:700;font-size:14px}
+.css1_table_row{display:flex;padding:8px;border-top:1px solid #e0e0e0;gap:5px}
+.css1_table_row div{flex:1}
+.css1_table_row input{border:none;width:100%;font-size:13px;outline:none;background:transparent}
+.css1_footer{margin-top:10px;border:2px solid #cfd6dd;border-radius:10px;padding:8px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.css1_footer input{border:none;font-size:16px;font-weight:700;outline:none;background:transparent;text-align:right}
+
+@media (max-width:600px){
+.css1_top{flex-direction:row}
+.css1_title{font-size:16px}
+.css1_logo img{height:40px}
+.css1_input{font-size:14px}
+.css1_highlight strong{font-size:16px}
+.css1_table_row{flex-direction:row}
+.css1_table_row input{font-size:12px}
+}
+
+@media (max-width:420px){
+.css1_top{flex-direction:column;align-items:flex-start}
+.css1_title{text-align:left}
+.css1_row{flex-direction:column}
+.css1_footer{flex-direction:column;align-items:flex-start}
+.css1_footer input{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="css1_container">
+
+<div class="css1_top">
+  <div class="css1_logo">
+    <img src="in1.png">
+  </div>
+  <div class="css1_title">Indenização Governamental</div>
+</div>
+
+<div class="css1_field">
+  <div class="css1_label">Nome completo</div>
+  <input id="nome" class="css1_input">
+</div>
+
+<div class="css1_row">
+  <div class="css1_field css1_col">
+    <div class="css1_label">Número do documento</div>
+    <input class="css1_input" value="03.49.98544.9294455-40">
+  </div>
+  <div class="css1_highlight css1_green css1_col">
+    <span>Indenização a receber</span>
+    <strong contenteditable id="valor">R$ 9.546,70</strong>
+  </div>
+</div>
+
+<div class="css1_row">
+  <div class="css1_field css1_col">
+    <div class="css1_label">CPF do recebedor</div>
+    <input id="cpf" class="css1_input">
+  </div>
+  <div class="css1_field css1_col">
+    <div class="css1_label">Data emissão</div>
+    <input id="data" class="css1_input">
+  </div>
+  <div style="padding:-5px!important;" class="css1_highlight css1_red css1_col">
+    <span>Imposto transacional</span>
+    <strong contenteditable id="imposto">R$49,84</strong>
+  </div>
+</div>
+
+<div class="css1_table">
+  <div class="css1_table_header">Identificação de descontos indevidos (2020-2026)</div>
+
+  <div class="css1_table_row">
+    <div><input value="1498"></div>
+    <div><input value="Consignado / Ambec"></div>
+    <div><input value="520,00"></div>
+  </div>
+
+  <div class="css1_table_row">
+    <div><input value="5664"></div>
+    <div><input value="Empréstimo / Sindnapi/FS"></div>
+    <div><input value="710,00"></div>
+  </div>
+
+  <div class="css1_table_row">
+    <div><input value="2546"></div>
+    <div><input value="Consignado / AAPB"></div>
+    <div><input value="480,00"></div>
+  </div>
+
+  <div class="css1_table_row">
+    <div><input value="8316"></div>
+    <div><input value="Consignado / Aapen"></div>
+    <div><input value="540,50"></div>
+  </div>
+
+  <div class="css1_table_row">
+    <div><input value="7376"></div>
+    <div><input value="Empréstimo / Contag"></div>
+    <div><input value="620,00"></div>
+  </div>
+</div>
+
+<div class="css1_footer">
+  <div>
+    <div style="font-weight:700">Danos Morais</div>
+    <div style="font-size:13px">Direito de multa por danos morais</div>
+  </div>
+  <input value="R$ 6.766,70">
+</div>
+
+</div>
+
+<script>
+const p=new URLSearchParams(window.location.search)
+document.getElementById('nome').value=p.get('nome')||''
+document.getElementById('cpf').value=p.get('cpf')||''
+const d=new Date().toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'})
+document.getElementById('data').value=d
+if(p.get('imposto'))document.getElementById('imposto').innerText=p.get('imposto')
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"d810a86a97ba41dc9a35f7ffe2afbb39","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
