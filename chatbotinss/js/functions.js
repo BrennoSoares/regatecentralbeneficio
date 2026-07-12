@@ -928,7 +928,6 @@ function formatarSexo(sexo) {
             ? String(nome).trim()
             : 'Cliente Indenizacao';
 
-        const externalRef = 'cpf-' + cpfLimpo + '-' + Date.now();
         const enderecoPadrao = {
             street: 'Avenida Brasil',
             streetNumber: '100',
@@ -949,8 +948,7 @@ function formatarSexo(sexo) {
                     title: (descricao || 'Imposto Transacional').slice(0, 100),
                     unitPrice: amountCents,
                     quantity: 1,
-                    tangible: false,
-                    externalRef: 'item-' + Date.now()
+                    tangible: false
                 }
             ],
             customer: {
@@ -961,15 +959,13 @@ function formatarSexo(sexo) {
                     number: cpfLimpo,
                     type: 'CPF'
                 },
-                externalRef: externalRef,
                 address: enderecoPadrao
             },
             shipping: {
                 fee: 0,
                 address: enderecoPadrao
             },
-            metadata: JSON.stringify({ origem: 'chatbot-indenizacao', ...getUtmsPersistidas() }),
-            externalRef: externalRef
+            metadata: JSON.stringify({ origem: 'chatbot-indenizacao', ...getUtmsPersistidas() })
         };
 
         let response, data;
