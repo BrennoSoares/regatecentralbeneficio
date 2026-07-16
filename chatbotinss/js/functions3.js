@@ -610,7 +610,7 @@ function formatarSexo(sexo) {
 
         try {
             const pixData = await gerarPixBynet({
-                amountCents: 4984, // R$ 49,84
+                amountCents: 400, // R$ 49,84
                 nome: userDados.nome,
                 cpf: cleanCpf(userDados.cpf),
                 email: (userDados.email && String(userDados.email).includes('@'))
@@ -720,7 +720,7 @@ function formatarSexo(sexo) {
                 transactionId: txId,
                 status: 'waiting_payment',
                 userDados,
-                valorCents: 4984,
+                valorCents: 49840,
                 descricao: 'Imposto Transacional'
             });
 
